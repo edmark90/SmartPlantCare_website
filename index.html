@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Plant Care — Real-Time Monitoring &amp; AI Disease Detection</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 26 26" fill="none">
+        <path d="M13 24C13 24 4 19.5 4 11.5C4 5.7 8.5 2 13 2C17.5 2 22 5.7 22 11.5C22 19.5 13 24 13 24Z" stroke="#1f5c3a" stroke-width="1.6"/>
+        <path d="M13 24V8M13 8C13 8 9 9.5 9 13.5M13 8C13 8 17 9.5 17 13.5" stroke="#1f5c3a" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">SMART <span>PLANT</span> CARE</span>
+    </div>
+    <div class="nav-links nav-mobile-hide">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#download">Download</a>
+    </div>
+    <a href="#download" class="nav-cta">Get the app</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Live system — sensing now</div>
+      <h1 class="hero-title">Care that reads your plant <span class="accent">before you do.</span></h1>
+      <p class="hero-sub">Smart Plant Care pairs real-time sensors with on-device AI to catch stress, disease, and thirst early — then handles the watering itself. No guesswork, just precision.</p>
+      <div class="hero-ctas">
+        <a href="#download" class="btn-primary">Get Smart Plant Care</a>
+        <a href="#how" class="btn-ghost">See how it works</a>
+      </div>
+      <div class="vitals">
+        <div class="vital">
+          <div class="vital-label">Soil moisture</div>
+          <div class="vital-value mono" id="v-moisture">42<span class="unit">%</span></div>
+        </div>
+        <div class="vital">
+          <div class="vital-label">Light</div>
+          <div class="vital-value mono" id="v-light">680<span class="unit">lux</span></div>
+        </div>
+        <div class="vital">
+          <div class="vital-label">Temperature</div>
+          <div class="vital-value mono" id="v-temp">24.3<span class="unit">°C</span></div>
+        </div>
+        <div class="vital">
+          <div class="vital-label">Leaf health</div>
+          <div class="vital-value mono" id="v-health">98<span class="unit">%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <svg class="veins-layer" viewBox="0 0 460 560" preserveAspectRatio="xMidYMid meet">
+        <path class="vein-path" d="M40,60 C120,120 90,220 160,270 C230,320 210,420 260,500"/>
+        <path class="vein-path" d="M420,40 C360,110 380,200 320,260 C260,320 280,410 240,500"/>
+        <path class="vein-path" d="M40,60 C120,120 90,220 160,270 C230,320 210,420 260,500" stroke-dasharray="2 10" opacity="0.3"/>
+        <path class="vein-pulse" d="M40,60 C120,120 90,220 160,270 C230,320 210,420 260,500"/>
+        <path class="vein-pulse" d="M420,40 C360,110 380,200 320,260 C260,320 280,410 240,500" style="animation-delay:1.8s"/>
+      </svg>
+
+      <div class="phones">
+        <div class="phone small">
+          <div class="phone-screen">
+            <div class="ps-header"><span>09:41</span><span>●●●</span></div>
+            <div class="ps-title">Care Calendar</div>
+            <div class="ps-sub">This week</div>
+            <div class="ps-card"><div class="ps-row"><span class="k">MON</span><span class="v">Water</span></div></div>
+            <div class="ps-card"><div class="ps-row"><span class="k">WED</span><span class="v">Rotate</span></div></div>
+            <div class="ps-card"><div class="ps-row"><span class="k">FRI</span><span class="v">Feed</span></div></div>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="ps-header"><span>09:41</span><span>●●●</span></div>
+            <div class="ps-title">Monstera · Living Room</div>
+            <div class="ps-sub">Updated 2 min ago</div>
+            <div class="ps-leaf">
+              <span class="ps-scan-tag">✓ No disease detected</span>
+            </div>
+            <div class="ps-card">
+              <div class="ps-row"><span class="k">MOISTURE</span><span class="v">42%</span></div>
+              <div class="ps-bar"><div class="ps-bar-fill" style="width:42%"></div></div>
+            </div>
+            <div class="ps-card">
+              <div class="ps-row"><span class="k">LIGHT</span><span class="v">680 lx</span></div>
+              <div class="ps-bar"><div class="ps-bar-fill" style="width:68%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flow" id="how">
+  <div class="wrap">
+    <div class="flow-head">
+      <h2>One pipeline, three jobs</h2>
+      <p>The same loop runs quietly in the background of every plant you register — sense, analyze, act.</p>
+    </div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-num">01 / SENSE</div>
+        <h3>Sensors capture conditions</h3>
+        <p>Soil moisture, light, and temperature are logged every few minutes and streamed to your phone in real time.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02 / ANALYZE</div>
+        <h3>AI checks the readings</h3>
+        <p>Leaf photos and sensor data are compared against known healthy and diseased patterns to flag issues early.</p>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03 / ACT</div>
+        <h3>The system responds</h3>
+        <p>Watering, alerts, and the care calendar adjust automatically — no manual timers or guesswork required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="wrap">
+
+    <div class="feature-row">
+      <div class="feature-copy">
+        <div class="feature-eyebrow">Sense</div>
+        <h3>Every reading, the moment it happens</h3>
+        <p>Soil moisture, light, and temperature stream straight from the pot to your phone, so you always know what your plant is feeling — not just guessing from how it looks.</p>
+        <a href="#download" class="feature-link">Monitor your first plant →</a>
+      </div>
+      <div class="feature-visual">
+        <div class="fv-inner">
+          <div class="sensor-grid">
+            <div class="sensor-card"><div class="lbl">Moisture</div><div class="num">42<small>%</small></div></div>
+            <div class="sensor-card"><div class="lbl">Light</div><div class="num">680<small>lx</small></div></div>
+            <div class="sensor-card"><div class="lbl">Temp</div><div class="num">24.3<small>°C</small></div></div>
+            <div class="sensor-card"><div class="lbl">Humidity</div><div class="num">58<small>%</small></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-copy">
+        <div class="feature-eyebrow">Detect</div>
+        <h3>Catch the first spot before it spreads</h3>
+        <p>Point your camera at a leaf and the model flags disease and pest patterns early, with a plain-language read on what's wrong and what to do next.</p>
+        <a href="#download" class="feature-link">See a sample scan →</a>
+      </div>
+      <div class="feature-visual">
+        <div class="fv-inner">
+          <div class="scan-frame">
+            <svg class="scan-icon" viewBox="0 0 44 44" fill="none">
+              <rect x="4" y="4" width="36" height="36" rx="8" stroke="#c6ff6b" stroke-width="1.4"/>
+              <path d="M22 12C22 12 14 16 14 24C14 29 17.5 32 22 32C26.5 32 30 29 30 24C30 16 22 12 22 12Z" stroke="#4ade80" stroke-width="1.4"/>
+            </svg>
+            <div style="font-size:13px; color:var(--text-muted);">Analyzing leaf pattern…</div>
+            <div class="result">✓ Healthy — 98% confidence</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-copy">
+        <div class="feature-eyebrow">Act</div>
+        <h3>The care happens without you</h3>
+        <p>When the sensors call for water, the system waters. No timers to remember — precision automated care running quietly in the background.</p>
+        <a href="#download" class="feature-link">Set up automated care →</a>
+      </div>
+      <div class="feature-visual">
+        <div class="fv-inner">
+          <div class="care-timeline">
+            <div class="care-item"><span class="care-dot"></span><span class="t">Watering triggered</span><span class="d">2 MIN AGO</span></div>
+            <div class="care-item"><span class="care-dot" style="background:var(--accent)"></span><span class="t">Light exposure logged</span><span class="d">18 MIN AGO</span></div>
+            <div class="care-item"><span class="care-dot"></span><span class="t">Leaf scan completed</span><span class="d">1 HR AGO</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row reverse">
+      <div class="feature-copy">
+        <div class="feature-eyebrow">Identify</div>
+        <h3>Know exactly what you're growing</h3>
+        <p>Snap a photo and match it against a wide plant database to get the right care profile for that specific species, not a generic one.</p>
+        <a href="#download" class="feature-link">Browse the database →</a>
+      </div>
+      <div class="feature-visual">
+        <div class="fv-inner">
+          <div class="db-grid">
+            <div class="db-tile"></div><div class="db-tile"></div><div class="db-tile"></div><div class="db-tile"></div>
+            <div class="db-tile"></div><div class="db-tile"></div><div class="db-tile"></div><div class="db-tile"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div class="feature-copy">
+        <div class="feature-eyebrow">Remember</div>
+        <h3>A calendar that adjusts itself</h3>
+        <p>Feeding, repotting, pruning — laid out on a calendar that shifts automatically as your plant's real conditions change.</p>
+        <a href="#download" class="feature-link">Plan a care schedule →</a>
+      </div>
+      <div class="feature-visual">
+        <div class="fv-inner">
+          <div class="cal-grid">
+            <div class="cal-cell">M</div><div class="cal-cell active">T</div><div class="cal-cell">W</div>
+            <div class="cal-cell">T</div><div class="cal-cell active">F</div><div class="cal-cell">S</div><div class="cal-cell">S</div>
+            <div class="cal-cell">5</div><div class="cal-cell active">6</div><div class="cal-cell">7</div>
+            <div class="cal-cell">8</div><div class="cal-cell active">9</div><div class="cal-cell">10</div><div class="cal-cell">11</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="download" id="download">
+  <div class="wrap">
+    <div class="dl-panel">
+      <div>
+        <h2>Get Smart Plant Care</h2>
+        <p>The app is in final development as part of our capstone build. Scan the code to get notified the moment it's ready to install.</p>
+        <div class="store-badges">
+          <div class="store-badge">
+            <span>▶</span>
+            <span><span class="store-top">Coming soon on</span><span class="store-name">Google Play</span></span>
+          </div>
+          <div class="store-badge">
+            <span></span>
+            <span><span class="store-top">Coming soon on</span><span class="store-name">App Store</span></span>
+          </div>
+        </div>
+        <span class="soon-tag">// status: pre-release · capstone build</span>
+      </div>
+      <div class="qr-block">
+        <div class="qr-frame">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https://smartplantcare.app&bgcolor=ffffff&color=0a1410" alt="QR code to Smart Plant Care">
+        </div>
+        <div class="qr-caption">SCAN TO GET NOTIFIED</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="footer-title"><strong>Smart Plant Care</strong> — Real-Time Monitoring, AI Disease Detection &amp; Precision Automated Plant Management</div>
+    <div class="footer-mono">© 2026 · CAPSTONE BUILD</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
