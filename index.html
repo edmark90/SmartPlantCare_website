@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Smart Plant Care — Real-Time Monitoring &amp; AI Disease Detection</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Plant Care — Real-Time Monitoring &amp; AI Disease Detection</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Global styles (tokens, reset, nav, footer, buttons) -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Page-specific styles (hero, features, download) -->
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
+<!-- ================================================================
+     NAV
+     ================================================================ -->
 <header>
   <nav class="wrap">
     <div class="logo">
@@ -29,16 +38,24 @@
   </nav>
 </header>
 
+
+<!-- ================================================================
+     HERO
+     ================================================================ -->
 <section class="hero">
   <div class="wrap hero-grid">
+
+    <!-- Copy -->
     <div>
       <div class="eyebrow">Live system — sensing now</div>
       <h1 class="hero-title">Care that reads your plant <span class="accent">before you do.</span></h1>
       <p class="hero-sub">Smart Plant Care pairs real-time sensors with on-device AI to catch stress, disease, and thirst early — then handles the watering itself. No guesswork, just precision.</p>
       <div class="hero-ctas">
         <a href="#download" class="btn-primary">Get Smart Plant Care</a>
-        <a href="#how" class="btn-ghost">See how it works</a>
+        <a href="#how"      class="btn-ghost">See how it works</a>
       </div>
+
+      <!-- Live vitals strip (updated by index.js) -->
       <div class="vitals">
         <div class="vital">
           <div class="vital-label">Soil moisture</div>
@@ -59,6 +76,7 @@
       </div>
     </div>
 
+    <!-- Visual: phone mockups + leaf vein animation -->
     <div class="hero-visual">
       <svg class="veins-layer" viewBox="0 0 460 560" preserveAspectRatio="xMidYMid meet">
         <path class="vein-path" d="M40,60 C120,120 90,220 160,270 C230,320 210,420 260,500"/>
@@ -69,6 +87,7 @@
       </svg>
 
       <div class="phones">
+        <!-- Secondary phone: Care Calendar -->
         <div class="phone small">
           <div class="phone-screen">
             <div class="ps-header"><span>09:41</span><span>●●●</span></div>
@@ -79,6 +98,7 @@
             <div class="ps-card"><div class="ps-row"><span class="k">FRI</span><span class="v">Feed</span></div></div>
           </div>
         </div>
+        <!-- Primary phone: Plant dashboard -->
         <div class="phone">
           <div class="phone-screen">
             <div class="ps-header"><span>09:41</span><span>●●●</span></div>
@@ -99,9 +119,14 @@
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
+
+<!-- ================================================================
+     HOW IT WORKS
+     ================================================================ -->
 <section class="flow" id="how">
   <div class="wrap">
     <div class="flow-head">
@@ -128,9 +153,14 @@
   </div>
 </section>
 
+
+<!-- ================================================================
+     FEATURES
+     ================================================================ -->
 <section class="features" id="features">
   <div class="wrap">
 
+    <!-- Sense -->
     <div class="feature-row">
       <div class="feature-copy">
         <div class="feature-eyebrow">Sense</div>
@@ -150,6 +180,7 @@
       </div>
     </div>
 
+    <!-- Detect -->
     <div class="feature-row reverse">
       <div class="feature-copy">
         <div class="feature-eyebrow">Detect</div>
@@ -171,6 +202,7 @@
       </div>
     </div>
 
+    <!-- Act -->
     <div class="feature-row">
       <div class="feature-copy">
         <div class="feature-eyebrow">Act</div>
@@ -181,14 +213,27 @@
       <div class="feature-visual">
         <div class="fv-inner">
           <div class="care-timeline">
-            <div class="care-item"><span class="care-dot"></span><span class="t">Watering triggered</span><span class="d">2 MIN AGO</span></div>
-            <div class="care-item"><span class="care-dot" style="background:var(--accent)"></span><span class="t">Light exposure logged</span><span class="d">18 MIN AGO</span></div>
-            <div class="care-item"><span class="care-dot"></span><span class="t">Leaf scan completed</span><span class="d">1 HR AGO</span></div>
+            <div class="care-item">
+              <span class="care-dot"></span>
+              <span class="t">Watering triggered</span>
+              <span class="d">2 MIN AGO</span>
+            </div>
+            <div class="care-item">
+              <span class="care-dot" style="background:var(--accent)"></span>
+              <span class="t">Light exposure logged</span>
+              <span class="d">18 MIN AGO</span>
+            </div>
+            <div class="care-item">
+              <span class="care-dot"></span>
+              <span class="t">Leaf scan completed</span>
+              <span class="d">1 HR AGO</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Identify -->
     <div class="feature-row reverse">
       <div class="feature-copy">
         <div class="feature-eyebrow">Identify</div>
@@ -199,13 +244,16 @@
       <div class="feature-visual">
         <div class="fv-inner">
           <div class="db-grid">
-            <div class="db-tile"></div><div class="db-tile"></div><div class="db-tile"></div><div class="db-tile"></div>
-            <div class="db-tile"></div><div class="db-tile"></div><div class="db-tile"></div><div class="db-tile"></div>
+            <div class="db-tile"></div><div class="db-tile"></div>
+            <div class="db-tile"></div><div class="db-tile"></div>
+            <div class="db-tile"></div><div class="db-tile"></div>
+            <div class="db-tile"></div><div class="db-tile"></div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Remember -->
     <div class="feature-row">
       <div class="feature-copy">
         <div class="feature-eyebrow">Remember</div>
@@ -228,6 +276,10 @@
   </div>
 </section>
 
+
+<!-- ================================================================
+     DOWNLOAD
+     ================================================================ -->
 <section class="download" id="download">
   <div class="wrap">
     <div class="dl-panel">
@@ -237,11 +289,17 @@
         <div class="store-badges">
           <div class="store-badge">
             <span>▶</span>
-            <span><span class="store-top">Coming soon on</span><span class="store-name">Google Play</span></span>
+            <span>
+              <span class="store-top">Coming soon on</span>
+              <span class="store-name">Google Play</span>
+            </span>
           </div>
           <div class="store-badge">
             <span></span>
-            <span><span class="store-top">Coming soon on</span><span class="store-name">App Store</span></span>
+            <span>
+              <span class="store-top">Coming soon on</span>
+              <span class="store-name">App Store</span>
+            </span>
           </div>
         </div>
         <span class="soon-tag">// status: pre-release · capstone build</span>
@@ -256,14 +314,23 @@
   </div>
 </section>
 
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
 <footer>
   <div class="wrap footer-row">
-    <div class="footer-title"><strong>Smart Plant Care</strong> — Real-Time Monitoring, AI Disease Detection &amp; Precision Automated Plant Management</div>
+    <div class="footer-title">
+      <strong>Smart Plant Care</strong> — Real-Time Monitoring, AI Disease Detection &amp; Precision Automated Plant Management
+    </div>
     <div class="footer-mono">© 2026 · CAPSTONE BUILD</div>
   </div>
 </footer>
 
-<script src="script.js"></script>
+
+<!-- Global utilities first, then page-specific logic -->
+<script src="js/global.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 </html>
