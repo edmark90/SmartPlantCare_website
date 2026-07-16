@@ -138,7 +138,8 @@ nav.wrap {
 
 .nav-links { display: flex; gap: 36px; align-items: center; }
 .nav-links a { font-size: 14px; color: var(--text-muted); transition: color .2s ease; }
-.nav-links a:hover { color: var(--text); }
+.nav-links a:hover{ color:var(--text); }
+.nav-links a.nav-cta:hover{ color:#ffffff; }
 
 .nav-cta {
   padding: 9px 18px;
