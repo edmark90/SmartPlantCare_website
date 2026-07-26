@@ -181,9 +181,12 @@ h1.hero-title .accent{ color:var(--primary); }
   box-shadow:0 14px 32px -22px rgba(20,45,32,0.16);
 }
 .plant-icon{
-  width:64px; height:64px; margin:0 auto 14px; border-radius:50%;
-  background:var(--bg-panel-2); display:flex; align-items:center; justify-content:center;
+  width:72px; height:72px; margin:0 auto 14px; border-radius:50%;
+  background:var(--bg-panel-2); overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid var(--line);
 }
+.plant-icon img{ width:100%; height:100%; object-fit:cover; display:block; }
 .plant-icon svg{ width:32px; height:32px; }
 .plant-card h4{ font-family:'Space Grotesk',sans-serif; font-size:15px; margin-bottom:8px; }
 .plant-tag{
