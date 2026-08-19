@@ -1,13 +1,3 @@
-/* ==========================================================================
-   INDEX.JS — Page-specific scripts for index.html.
-   Depends on global.js (jitter, REDUCE_MOTION must already be loaded).
-   ========================================================================== */
-
-/* ---------- HERO PHONE — LIVE BAR NUDGE ----------
-   Gently nudges the two progress bars in the hero phone dashboard so the
-   screen feels alive, without needing numbered vital IDs in the markup.
-   ---------------------------------------------------------------------- */
-
 function nudgeBars(){
   document.querySelectorAll('.hero .ps-bar-fill, .app-exp .phone:not(.side) .ps-bar-fill').forEach((bar) => {
     const current = parseFloat(bar.style.width) || 50;
@@ -19,3 +9,14 @@ function nudgeBars(){
 if (!REDUCE_MOTION) {
   setInterval(nudgeBars, 2600);
 }
+
+function initFAQ(){
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const question = item.querySelector('.faq-q');
+    question.addEventListener('click', () => {
+      item.classList.toggle('open');
+    });
+  });
+}
+
+initFAQ();
