@@ -62,15 +62,47 @@
 
     <div class="hero-visual">
       <div class="hero-blob"></div>
+
+      <svg class="hero-vines" viewBox="0 0 460 560" preserveAspectRatio="xMidYMid meet">
+
+        <path class="vine-path" d="M60,540 C40,480 90,430 80,380 C68,320 130,300 118,240 C108,180 150,150 140,90"/>
+        <path class="vine-pulse" d="M60,540 C40,480 90,430 80,380 C68,320 130,300 118,240 C108,180 150,150 140,90"/>
+
+        <path class="vine-path" d="M400,520 C420,460 370,420 382,360 C394,300 340,270 352,210 C362,150 320,120 330,60"/>
+        <path class="vine-pulse" d="M400,520 C420,460 370,420 382,360 C394,300 340,270 352,210 C362,150 320,120 330,60" style="animation-delay:1.6s"/>
+
+
+        <g class="vine-leaf">
+          <path d="M0,0C10,-14 28,-14 30,0C28,10 10,10 0,0Z" transform="translate(70,400) rotate(-25)" fill="#6b8e0f" opacity="0.85"/>
+        </g>
+        <g class="vine-leaf">
+          <path d="M0,0C10,-14 28,-14 30,0C28,10 10,10 0,0Z" transform="translate(112,260) rotate(35)" fill="#1f5c3a" opacity="0.85"/>
+        </g>
+        <g class="vine-leaf">
+          <path d="M0,0C10,-14 28,-14 30,0C28,10 10,10 0,0Z" transform="translate(392,380) rotate(150)" fill="#1f5c3a" opacity="0.85"/>
+        </g>
+        <g class="vine-leaf">
+          <path d="M0,0C10,-14 28,-14 30,0C28,10 10,10 0,0Z" transform="translate(348,230) rotate(-140)" fill="#6b8e0f" opacity="0.85"/>
+        </g>
+        <g class="vine-leaf">
+          <path d="M0,0C10,-14 28,-14 30,0C28,10 10,10 0,0Z" transform="translate(138,100) rotate(20)" fill="#6b8e0f" opacity="0.8"/>
+        </g>
+        <g class="vine-leaf">
+          <path d="M0,0C10,-14 28,-14 30,0C28,10 10,10 0,0Z" transform="translate(332,80) rotate(-160)" fill="#1f5c3a" opacity="0.8"/>
+        </g>
+      </svg>
+
       <svg class="hero-leaf-deco" viewBox="0 0 40 40" fill="none">
         <path d="M20 4C20 4 6 10 6 22C6 30 12 36 20 36C28 36 34 30 34 22C34 10 20 4 20 4Z" stroke="#1f5c3a" stroke-width="1.3" opacity="0.5"/>
       </svg>
       <svg class="hero-leaf-deco lower" viewBox="0 0 40 40" fill="none">
         <path d="M20 4C20 4 6 10 6 22C6 30 12 36 20 36C28 36 34 30 34 22C34 10 20 4 20 4Z" stroke="#6b8e0f" stroke-width="1.3" opacity="0.4"/>
       </svg>
+
+      <div class="phone-glow"></div>
       <div class="phone">
         <div class="phone-screen">
-          <div class="ps-header"><span>01:13 PM</span><span>●●●</span></div>
+          <div class="ps-header"><span>09:41 AM</span><span>●●●</span></div>
           <div class="ps-title">Chili · Living Room</div>
           <div class="ps-sub">Updated 2 min ago</div>
           <div class="ps-leaf">
@@ -121,7 +153,7 @@
       <div class="why-body">
         <div class="why-copy">
           <h3>Plant Identification</h3>
-          <p>Snap a photo of any plant and match it against a wide species database to get the right care profile, not a generic one.</p>
+          <p>Snap a photo of any plant and match it against a wide species database to get the right care profile — not a generic one.</p>
         </div>
         <div class="why-icon-panel">
           <svg viewBox="0 0 64 64" fill="none">
@@ -138,7 +170,7 @@
       <div class="why-body">
         <div class="why-copy">
           <h3>Smart Irrigation</h3>
-          <p>When the soil sensor calls for water, the system waters automatically—no timers to remember, just precision care running in the background.</p>
+          <p>When the soil sensor calls for water, the system waters automatically — no timers to remember, just precision care running in the background.</p>
         </div>
         <div class="why-icon-panel">
           <svg viewBox="0 0 64 64" fill="none">
@@ -156,13 +188,13 @@
     <div class="section-head">
       <span class="section-eyebrow">App Experience</span>
       <h2>Everything You Need in One App</h2>
-      <p>From live sensor dashboards to your calendar, every screen is built around one plant at a time.</p>
+      <p>From live sensor dashboards to your care calendar, every screen is built around one plant at a time.</p>
     </div>
 
     <div class="carousel">
       <div class="phone side left">
         <div class="phone-screen">
-          <div class="ps-header"><span>01:13 PM</span><span>●●●</span></div>
+          <div class="ps-header"><span>09:41</span><span>●●●</span></div>
           <div class="ps-title">My Plants</div>
           <div class="ps-sub">4 active</div>
           <div class="ps-card"><div class="ps-row"><span class="k">CHILI</span><span class="v">Healthy</span></div></div>
@@ -173,7 +205,7 @@
 
       <div class="phone">
         <div class="phone-screen">
-          <div class="ps-header"><span>01:13 PM</span><span>●●●</span></div>
+          <div class="ps-header"><span>09:41</span><span>●●●</span></div>
           <div class="ps-title">Dashboard</div>
           <div class="ps-sub">All plants · Live</div>
           <div class="ps-leaf">
@@ -192,8 +224,8 @@
 
       <div class="phone side right">
         <div class="phone-screen">
-          <div class="ps-header"><span>01:13 PM</span><span>●●●</span></div>
-          <div class="ps-title">Calendar</div>
+          <div class="ps-header"><span>09:41</span><span>●●●</span></div>
+          <div class="ps-title">Care Calendar</div>
           <div class="ps-sub">This week</div>
           <div class="ps-card"><div class="ps-row"><span class="k">MON</span><span class="v">Water</span></div></div>
           <div class="ps-card"><div class="ps-row"><span class="k">WED</span><span class="v">Rotate</span></div></div>
@@ -249,7 +281,7 @@
     </div>
     <div>
       <div class="section-eyebrow">Benefits</div>
-      <h2 style="margin-bottom:26px;">Why growers choose SmartPlantCare?</h2>
+      <h2 style="margin-bottom:26px;">Why growers choose SmartPlantCare</h2>
       <div class="benefit-list">
         <div class="benefit-item">
           <span class="dot-check"><svg viewBox="0 0 13 13" fill="none"><path d="M2 6.5L5.2 9.7L11 3.5" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -269,7 +301,7 @@
           <span class="dot-check"><svg viewBox="0 0 13 13" fill="none"><path d="M2 6.5L5.2 9.7L11 3.5" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
           <div>
             <h4>Automate irrigation</h4>
-            <p>Watering happens precisely when your plant needs it, not on a fixed timer.</p>
+            <p>Watering happens precisely when your plant needs it — not on a fixed timer.</p>
           </div>
         </div>
         <div class="benefit-item">
@@ -298,21 +330,21 @@
           <img src="tomato.jpg" alt="Tomato plant">
         </div>
         <h4>Tomato</h4>
-        <span class="plant-tag">SUPPORTED</span>
+        <span class="plant-tag">HEALTHY</span>
       </div>
       <div class="plant-card">
         <div class="plant-icon">
           <img src="eggplant.jpg" alt="Eggplant plant">
         </div>
         <h4>Eggplant</h4>
-        <span class="plant-tag">SUPPORTED</span>
+        <span class="plant-tag">HEALTHY</span>
       </div>
       <div class="plant-card">
         <div class="plant-icon">
           <img src="chili.jpg" alt="Chili plant">
         </div>
         <h4>Chili</h4>
-        <span class="plant-tag">SUPPORTED</span>
+        <span class="plant-tag">HEALTHY</span>
       </div>
     </div>
   </div>
@@ -332,7 +364,7 @@
     <div class="team-grid">
       <div class="team-card">
         <div class="team-avatar">MD</div>
-        <h4>Edmark O. Basaya</h4>
+        <h4>Edmark O.Basaya</h4>
         <div class="role">Lead Mobile Developer</div>
         <div class="note">Android app &amp; UI implementation</div>
       </div>
@@ -366,7 +398,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">How accurate is the AI disease detection?<span class="plus">+</span></button>
-        <div class="faq-a"><p>The model is trained to flag common disease and pest patterns early with a confidence score, and is intended as a first read, not a replacement for expert diagnosis.</p></div>
+        <div class="faq-a"><p>The model is trained to flag common disease and pest patterns early with a confidence score, and is intended as a first read — not a replacement for expert diagnosis.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Which plants does SmartPlantCare support?<span class="plus">+</span></button>
@@ -391,7 +423,7 @@
           </svg>
           <span class="logo-text">SMART <span>PLANT</span> CARE</span>
         </div>
-        <p>SmartPlantCare helps you identify plants, detect diseases, monitor plant health, and automate irrigation, all from one simple Android application.</p>
+        <p>SmartPlantCare helps you identify plants, detect diseases, monitor plant health, and automate irrigation — all from one simple Android application.</p>
         <div class="footer-download-row">
           <div class="footer-qr">
             <svg viewBox="0 0 84 84" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
@@ -420,7 +452,18 @@
             </svg>
           </div>
           <div>
-            <a href="#" class="footer-download-btn">⬇ Download APK</a>
+            <a href="#" class="play-badge">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
+                <path d="M6,4 L6,12 L13.2,7.4 Z" fill="#00D2FF"/>
+                <path d="M6,12 L13.2,7.4 L19,12 Z" fill="#FFCB05"/>
+                <path d="M6,12 L19,12 L13.2,16.6 Z" fill="#EA4335"/>
+                <path d="M6,12 L13.2,16.6 L6,20 Z" fill="#34A853"/>
+              </svg>
+              <span class="play-badge-text">
+                <span class="play-badge-top">GET IT ON</span>
+                <span class="play-badge-main">Google Play</span>
+              </span>
+            </a>
             <div class="footer-apk-note">v0.9 pre-release · Android required</div>
           </div>
         </div>
