@@ -1,4 +1,3 @@
-
 /**
  * @param {number} base      - Center value (e.g. 42)
  * @param {number} range     - Max offset up or down (e.g. 2)
