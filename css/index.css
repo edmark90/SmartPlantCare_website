@@ -250,6 +250,7 @@ h1.hero-title .accent{ color:var(--primary); }
 .team-card .note{ font-size:12px; color:var(--text-dim); }
 @media (max-width:760px){ .team-grid{ grid-template-columns:1fr; } }
 
+/* ---------- FAQ ---------- */
 .faq{ padding:80px 0; border-top:1px solid var(--line); }
 .faq-list{ max-width:720px; margin:48px auto 0; display:flex; flex-direction:column; gap:12px; }
 .faq-item{
@@ -262,11 +263,24 @@ h1.hero-title .accent{ color:var(--primary); }
 }
 .faq-q .plus{ font-size:18px; color:var(--primary); transition:transform .2s ease; flex-shrink:0; margin-left:16px; }
 .faq-item.open .faq-q .plus{ transform:rotate(45deg); }
+
 .faq-a{
-  max-height:0; overflow:hidden; transition:max-height .25s ease;
-  padding:0 22px; font-size:13.5px; color:var(--text-muted);
+  display:grid;
+  grid-template-rows: minmax(0, 0fr);
+  overflow:hidden;
+  transition:grid-template-rows .35s ease;
+  background:var(--primary);
+  border-radius:0 0 12px 12px;
 }
-.faq-item.open .faq-a{ max-height:200px; padding-bottom:20px; }
+.faq-a p{
+  overflow:hidden;
+  color:#ffffff;
+  padding:16px 22px 20px;
+  font-size:13.5px;
+}
+.faq-item.open .faq-a{
+  grid-template-rows: minmax(0, 1fr);
+}
 
 footer.site-footer{
   background:var(--primary); color:#eaf2ec; border-top:none; padding:64px 0 0; margin-top:60px;
