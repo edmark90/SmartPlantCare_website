@@ -1,6 +1,4 @@
-
 section{ position:relative; z-index:1; }
-
 
 .hero{ padding:88px 0 80px; }
 .hero-grid{
@@ -139,14 +137,17 @@ h1.hero-title .accent{ color:var(--primary); }
 .why-copy p{ color:var(--text-muted); font-size:15px; max-width:440px; }
 .why-icon-panel{
   background:var(--bg-panel); border:1px solid var(--line); border-radius:var(--radius);
-  min-height:150px; display:flex; align-items:center; justify-content:center;
+  aspect-ratio:16/9; display:flex; align-items:center; justify-content:center;
   box-shadow:0 16px 36px -22px rgba(20,45,32,0.18);
+  overflow:hidden;
 }
+.why-icon-panel img{ width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.why-icon-panel img.shift-right{ object-position:85% center; }
 .why-icon-panel svg{ width:64px; height:64px; }
 @media (max-width:760px){
   .why-row{ grid-template-columns:1fr; gap:14px; }
   .why-body{ grid-template-columns:1fr; }
-  .why-icon-panel{ order:-1; padding:24px; }
+  .why-icon-panel{ order:-1; }
 }
 
 .app-exp{ padding:80px 0; border-top:1px solid var(--line); text-align:center; }
@@ -250,7 +251,6 @@ h1.hero-title .accent{ color:var(--primary); }
 .team-card .note{ font-size:12px; color:var(--text-dim); }
 @media (max-width:760px){ .team-grid{ grid-template-columns:1fr; } }
 
-/* ---------- FAQ ---------- */
 .faq{ padding:80px 0; border-top:1px solid var(--line); }
 .faq-list{ max-width:720px; margin:48px auto 0; display:flex; flex-direction:column; gap:12px; }
 .faq-item{
