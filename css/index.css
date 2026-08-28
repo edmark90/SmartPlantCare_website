@@ -1,5 +1,9 @@
 section{ position:relative; z-index:1; }
 
+/* ---------- LOGO (image versions) ---------- */
+.logo-mark{ width:30px; height:auto; display:block; }
+.footer-brand .logo-mark{ width:38px; height:auto; }
+
 .hero{ padding:88px 0 80px; }
 .hero-grid{
   display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
@@ -191,10 +195,11 @@ h1.hero-title .accent{ color:var(--primary); }
 .benefits-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
 .benefits-panel{
   background:var(--bg-panel); border:1px solid var(--line); border-radius:var(--radius);
-  min-height:280px; display:flex; align-items:center; justify-content:center;
+  min-height:200px; padding:24px; display:flex; align-items:center; justify-content:center;
   box-shadow:0 20px 44px -24px rgba(20,45,32,0.18);
 }
 .benefits-panel svg{ width:120px; height:120px; }
+.benefits-panel img.benefits-logo{ width:150px; height:auto; }
 .benefit-list{ display:flex; flex-direction:column; gap:18px; }
 .benefit-item{ display:flex; align-items:flex-start; gap:14px; }
 .benefit-item .dot-check{
