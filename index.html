@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Plant Care</title>
+  <meta name="description" content="SmartPlantCare helps you identify plants, detect diseases, monitor plant health, and automate irrigation through one simple Android application.">
+
+  <!-- Open Graph / social sharing preview -->
+  <meta property="og:title" content="SmartPlantCare — AI-Powered Plant Monitoring & Care">
+  <meta property="og:description" content="Identify plants, detect diseases, monitor plant health, and automate irrigation — all from one simple Android app.">
+  <meta property="og:image" content="logo-icon.png">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="logo-icon.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +35,20 @@
       <a href="#about" class="nav-cta">About</a>
       <a href="#faq" class="nav-cta">FAQ</a>
     </div>
-    <a href="#download" class="nav-cta">Download APK</a>
+    <a href="#download" class="nav-cta nav-mobile-hide">Download APK</a>
+
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#why">Features</a>
+    <a href="#how">How It Works</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#download" class="mobile-menu-cta">Download APK</a>
+  </div>
 </header>
 
 <section class="hero">
@@ -136,7 +157,7 @@
           <p>Point your camera at a leaf and the model flags disease and pest patterns early, with a plain-language read on what's wrong and what to do next.</p>
         </div>
         <div class="why-icon-panel">
-          <img src="ai-disease-detection.jpg" alt="AI disease detection on a phone">
+          <img src="ai-disease-detection.jpg" alt="AI disease detection on a phone" loading="lazy">
         </div>
       </div>
     </div>
@@ -146,10 +167,10 @@
       <div class="why-body">
         <div class="why-copy">
           <h3>Plant Identification</h3>
-          <p>Snap a photo of any plant and match it against a wide species database to get the right care profile — not a generic one.</p>
+          <p>Snap a photo of any plant and match it against a wide species database to get the right care profile, not a generic one.</p>
         </div>
         <div class="why-icon-panel">
-          <img src="plant-identification.jpg" alt="Identifying a plant with a phone" class="shift-right">
+          <img src="plant-identification.jpg" alt="Identifying a plant with a phone" class="shift-right" loading="lazy">
         </div>
       </div>
     </div>
@@ -159,10 +180,10 @@
       <div class="why-body">
         <div class="why-copy">
           <h3>Smart Irrigation</h3>
-          <p>When the soil sensor calls for water, the system waters automatically — no timers to remember, just precision care running in the background.</p>
+          <p>When the soil sensor calls for water, the system waters automatically, no timers to remember, just precision care running in the background.</p>
         </div>
         <div class="why-icon-panel">
-          <img src="smart-irrigation.jpg" alt="Smart irrigation system watering plants">
+          <img src="smart-irrigation.jpg" alt="Smart irrigation system watering plants" loading="lazy">
         </div>
       </div>
     </div>
@@ -310,21 +331,21 @@
     <div class="plant-grid">
       <div class="plant-card">
         <div class="plant-icon">
-          <img src="tomato.jpg" alt="Tomato plant">
+          <img src="tomato.jpg" alt="Tomato plant" loading="lazy">
         </div>
         <h4>Tomato</h4>
         <span class="plant-tag">HEALTHY</span>
       </div>
       <div class="plant-card">
         <div class="plant-icon">
-          <img src="eggplant.jpg" alt="Eggplant plant">
+          <img src="eggplant.jpg" alt="Eggplant plant" loading="lazy">
         </div>
         <h4>Eggplant</h4>
         <span class="plant-tag">HEALTHY</span>
       </div>
       <div class="plant-card">
         <div class="plant-icon">
-          <img src="chili.jpg" alt="Chili plant">
+          <img src="chili.jpg" alt="Chili plant" loading="lazy">
         </div>
         <h4>Chili</h4>
         <span class="plant-tag">HEALTHY</span>
@@ -346,7 +367,9 @@
     </div>
     <div class="team-grid">
       <div class="team-card">
-        <div class="team-avatar">MD</div>
+        <div class="team-avatar">
+          <img src="team-edmark.jpg" alt="Edmark O. Basaya">
+        </div>
         <h4>Edmark O.Basaya</h4>
         <div class="role">Lead Mobile Developer</div>
         <div class="note">Android app &amp; UI implementation</div>
@@ -354,13 +377,15 @@
       <div class="team-card">
         <div class="team-avatar">IoT</div>
         <h4>Cydeen Cabrillas</h4>
-        <div class="role">Backend &amp; IoT Developer</div>
+        <div class="role">Back-end &amp; IoT Developer</div>
         <div class="note">Sensors, integration &amp; API</div>
       </div>
       <div class="team-card">
-        <div class="team-avatar">AI</div>
+        <div class="team-avatar">
+          <img src="team-jc.jpg" alt="John Christian F. Base">
+        </div>
         <h4>John Christian F. Base</h4>
-        <div class="role">AI / ML &amp; QA</div>
+        <div class="role">Front-end Developer &amp; testing</div>
         <div class="note">Disease detection model &amp; testing</div>
       </div>
     </div>
@@ -406,21 +431,9 @@
         <p>SmartPlantCare helps you identify plants, detect diseases, monitor plant health, and automate irrigation — all from one simple Android application.</p>
         <div class="footer-download-row">
           <div class="footer-qr">
-            <img src="qr-code.jpg" alt="QR code to download SmartPlantCare">
+            <img src="qr-code.jpg" alt="QR code to download SmartPlantCare" loading="lazy">
           </div>
           <div>
-            <a href="#" class="play-badge">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none">
-                <path d="M6,4 L6,12 L13.2,7.4 Z" fill="#00D2FF"/>
-                <path d="M6,12 L13.2,7.4 L19,12 Z" fill="#FFCB05"/>
-                <path d="M6,12 L19,12 L13.2,16.6 Z" fill="#EA4335"/>
-                <path d="M6,12 L13.2,16.6 L6,20 Z" fill="#34A853"/>
-              </svg>
-              <span class="play-badge-text">
-                <span class="play-badge-top">GET IT ON</span>
-                <span class="play-badge-main">Google Play</span>
-              </span>
-            </a>
             <div class="footer-apk-note">v0.9 pre-release · Android required</div>
           </div>
         </div>
@@ -441,7 +454,7 @@
         <ul>
           <li><a href="#about">Edmark O. Basaya — Mobile</a></li>
           <li><a href="#about">Cydeen Cabrillas — IoT</a></li>
-          <li><a href="#about">John Christian F. Base — AI / QA</a></li>
+          <li><a href="#about">John Christian F. Base — Frontend</a></li>
         </ul>
       </div>
     </div>
@@ -482,6 +495,10 @@
     </div>
   </div>
 </footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
 
 <script src="js/global.js"></script>
 <script src="js/index.js"></script>

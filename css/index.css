@@ -4,6 +4,58 @@ section{ position:relative; z-index:1; }
 .logo-mark{ width:30px; height:auto; display:block; }
 .footer-brand .logo-mark{ width:38px; height:auto; }
 
+/* ---------- MOBILE HAMBURGER MENU ---------- */
+.nav-burger{
+  display:none; flex-direction:column; justify-content:center; gap:5px;
+  width:38px; height:38px; background:none; border:none; cursor:pointer;
+  padding:0; flex-shrink:0;
+}
+.nav-burger span{
+  display:block; width:100%; height:2px; background:var(--text);
+  border-radius:2px; transition:transform .25s ease, opacity .25s ease;
+}
+.nav-burger[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.nav-burger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+.nav-burger[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+.mobile-menu{
+  display:none; flex-direction:column;
+  max-height:0; overflow:hidden;
+  background:var(--bg-panel); border-top:1px solid var(--line);
+  transition:max-height .3s ease;
+}
+.mobile-menu.open{ max-height:320px; }
+.mobile-menu a{
+  padding:16px 32px; font-size:14.5px; color:var(--text);
+  border-bottom:1px solid var(--line);
+}
+.mobile-menu a:last-child{ border-bottom:none; }
+.mobile-menu-cta{
+  color:var(--primary) !important; font-weight:600;
+}
+
+@media (max-width:760px){
+  .nav-burger{ display:flex; }
+  .mobile-menu{ display:flex; }
+}
+
+/* ---------- ACTIVE NAV LINK (scroll spy) ---------- */
+.nav-links a.active{ color:var(--primary); font-weight:600; }
+
+/* ---------- BACK TO TOP BUTTON ---------- */
+.back-to-top{
+  position:fixed; bottom:26px; right:26px; z-index:60;
+  width:44px; height:44px; border-radius:50%;
+  background:var(--primary); border:none; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 12px 26px -10px rgba(20,45,32,0.45);
+  opacity:0; visibility:hidden; transform:translateY(10px);
+  transition:opacity .25s ease, transform .25s ease, background .2s ease;
+}
+.back-to-top.visible{ opacity:1; visibility:visible; transform:translateY(0); }
+.back-to-top:hover{ background:var(--accent); }
+.back-to-top svg{ width:20px; height:20px; color:#ffffff; }
+
 .hero{ padding:88px 0 80px; }
 .hero-grid{
   display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
@@ -250,7 +302,9 @@ h1.hero-title .accent{ color:var(--primary); }
   width:64px; height:64px; margin:0 auto 14px; border-radius:50%;
   background:var(--primary); color:#fff; display:flex; align-items:center; justify-content:center;
   font-family:'Inter',sans-serif; font-weight:600; font-size:18px;
+  overflow:hidden;
 }
+.team-avatar img{ width:100%; height:100%; object-fit:cover; display:block; }
 .team-card h4{ font-family:'Inter',sans-serif; font-size:15.5px; margin-bottom:4px; }
 .team-card .role{ font-size:12.5px; color:var(--primary); margin-bottom:8px; }
 .team-card .note{ font-size:12px; color:var(--text-dim); }
