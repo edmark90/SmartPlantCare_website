@@ -1,82 +1,65 @@
-
-
-function nudgeBars(){
-  document.querySelectorAll('.hero .ps-bar-fill, .app-exp .phone:not(.side) .ps-bar-fill').forEach((bar) => {
-    const current = parseFloat(bar.style.width) || 50;
-    const next = Math.min(96, Math.max(8, current + (Math.random() * 6 - 3)));
-    bar.style.width = next.toFixed(0) + '%';
+// Motion preference is shared by global.js.
+// Readings in the app illustration stay fixed so labels and bars agree.
+document.querySelectorAll('.faq-item').forEach((item, index) => {
+  const question = item.querySelector('.faq-q');
+  const answer = item.querySelector('.faq-a');
+  answer.id = `faq-answer-${index}`;
+  question.type = 'button';
+  question.setAttribute('aria-controls', answer.id);
+  question.setAttribute('aria-expanded', 'false');
+  question.addEventListener('click', () => {
+    const open = item.classList.toggle('open');
+    question.setAttribute('aria-expanded', String(open));
+  });
+});
+const burger = document.getElementById('navBurger');
+const menu = document.getElementById('mobileMenu');
+if (burger && menu) {
+  const setMenu = (open) => {
+    menu.classList.toggle('open', open);
+    menu.inert = !open;
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  setMenu(false);
+  burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && burger.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      burger.focus();
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('header')) setMenu(false);
+  });
+  window.matchMedia('(min-width: 761px)').addEventListener('change', event => {
+    if (event.matches) setMenu(false);
   });
 }
-
-if (!REDUCE_MOTION) {
-  setInterval(nudgeBars, 2600);
-}
-
-function initFAQ(){
-  document.querySelectorAll('.faq-item').forEach((item) => {
-    const question = item.querySelector('.faq-q');
-    question.addEventListener('click', () => {
-      item.classList.toggle('open');
+if ('IntersectionObserver' in window) {
+  const links = document.querySelectorAll('.nav-links a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      links.forEach(link => {
+        const active = link.hash === '#' + entry.target.id;
+        link.classList.toggle('active', active);
+        if (active) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
     });
-  });
+  }, { rootMargin: '-15% 0px -60% 0px' });
+  document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
 }
-
-initFAQ();
-
-function initMobileMenu(){
-  const burger = document.getElementById('navBurger');
-  const menu = document.getElementById('mobileMenu');
-  if (!burger || !menu) return;
-
-  function closeMenu(){
-    menu.classList.remove('open');
-    burger.setAttribute('aria-expanded', 'false');
-  }
-
-  burger.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-
-  menu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', closeMenu);
-  });
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  const update = () => {
+    const visible = window.scrollY > 600;
+    backToTop.classList.toggle('visible', visible);
+    backToTop.tabIndex = visible ? 0 : -1;
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: REDUCE_MOTION ? 'auto' : 'smooth' }));
 }
-
-initMobileMenu();
-
-function initScrollSpy(){
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
-  if (!sections.length || !navLinks.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach((link) => {
-          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-        });
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
-
-  sections.forEach((section) => observer.observe(section));
-}
-
-initScrollSpy();
-
-function initBackToTop(){
-  const btn = document.getElementById('backToTop');
-  if (!btn) return;
-
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 600);
-  });
-
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: REDUCE_MOTION ? 'auto' : 'smooth' });
-  });
-}
-
-initBackToTop();

@@ -1,0 +1,39 @@
+/* Botanical visual refresh */
+:root{--bg:#f8f8f0;--text:#183d2d;--text-muted:#526858;--text-dim:#657565;--primary:#245c3d;--accent:#426e24;--radius:22px;--maxw:1240px}
+body::before{display:none}
+section,footer[id]{scroll-margin-top:96px}
+.skip-link{position:fixed;top:12px;left:12px;z-index:100;background:var(--primary);color:white;padding:12px 20px;transform:translateY(-150%)}
+.skip-link:focus{transform:translateY(0)}
+header{background:rgba(248,248,240,.95)}
+nav.wrap{height:86px}.logo-mark{width:34px;height:34px}.logo-text{font-size:18px}
+.nav-links{gap:28px}.nav-links .nav-cta{border:0;border-radius:0;padding:8px 0;color:var(--text-muted)}
+.nav-links .nav-cta:hover,.nav-links .nav-cta.active{background:none;color:var(--primary);box-shadow:0 2px var(--primary)}
+nav>.nav-cta{background:var(--primary);color:white;padding:12px 22px}
+.hero{padding:76px 0 84px;position:relative;background:radial-gradient(ellipse at 90% 30%,#e1e9cd 0,transparent 53%)}
+.hero-grid{gap:48px;grid-template-columns:1.12fr 1fr}
+h1.hero-title{font-size:clamp(44px,5.4vw,72px);line-height:1.06;letter-spacing:-.045em;max-width:660px;margin-bottom:24px}
+h1.hero-title .accent{display:block;color:#4e7337}
+.eyebrow{font-size:11px;letter-spacing:.12em;border:1px solid #cad5bd;padding:8px 12px;border-radius:30px;background:#f0f4e6;margin-bottom:24px}
+.hero-sub{font-size:17px;line-height:1.8;max-width:470px}.btn-primary,.btn-ghost{padding:16px 25px;border-radius:12px}
+.hero-pills{gap:16px}.hero-pill{border:0;background:none;box-shadow:none;padding:0;font-size:11px;gap:6px}.hero-pill .dot-check{width:16px;height:16px}
+.hero-visual{height:540px;background:linear-gradient(145deg,#dbe5c5,#edf1dd);border-radius:180px 180px 28px 28px;border:1px solid #cdd9b9}
+.hero-visual::after{content:'APP PREVIEW / SMARTER EVERY DAY';position:absolute;bottom:20px;font:9px 'JetBrains Mono',monospace;letter-spacing:.13em;color:#4e653e}
+.hero-blob{width:330px;height:330px;background:#c2d4aa}.hero-vines{width:100%;max-width:400px}.hero-visual>.phone{transform:translate(-50%,-50%) rotate(-6deg);box-shadow:20px 32px 40px -15px #45653d70;border:5px solid #284431}
+.ps-leaf{height:120px;background:linear-gradient(0deg,#082a1a55,#082a1a00),url('../images/chili.jpg') center/cover;border:0;align-items:flex-end;padding:10px 0}.ps-scan-tag{background:#173d2de8;color:#e1f6ca}.ps-header,.ps-row .k{color:#adbfaf}.ps-sub{color:#a1bba9}
+.section-head{max-width:640px;margin-bottom:48px}.section-head h2{font-size:clamp(30px,3.8vw,46px);letter-spacing:-.035em}.section-head p{line-height:1.8}.section-eyebrow{font-size:10px;letter-spacing:.18em}
+.why,.how,.supported,.about,.faq,.benefits,.app-exp{padding:88px 0}
+.why>.wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.why .section-head{grid-column:1/-1}
+.why-row{display:flex;flex-direction:column;gap:14px;padding:20px;background:white;border:1px solid #dee4d4;border-radius:22px;position:relative;overflow:hidden}
+.why-row:last-child{border-bottom:1px solid #dee4d4}.why-num{font-size:12px;opacity:1;letter-spacing:.12em;color:#6b8057}.why-body{display:flex;flex-direction:column;gap:24px;align-items:stretch}.why-icon-panel{order:-1;aspect-ratio:4/3;border:0;border-radius:14px;box-shadow:none}.why-copy h3{font-size:25px}.why-copy p{font-size:14px;line-height:1.8}
+.app-exp{background:#eaf0e0}.carousel{gap:22px}.carousel .phone.side{opacity:.9}.carousel .phone{box-shadow:0 25px 36px -20px #143f2770}
+.how-steps{gap:18px}.how-step{box-shadow:none;background:#f0f3e7;padding:28px 22px;border-color:#dae2ce}.how-step h3{font-family:'Inter',sans-serif;font-size:16px}.how-step p{font-size:14px;line-height:1.8}.how-arrow{display:none}.how-step .how-num{border-radius:10px;margin-bottom:26px}
+.benefits{background:#eaf0e0}.benefits-panel{min-height:380px;background:linear-gradient(0deg,#193d2980,#193d2910),url('../images/smart-irrigation.jpg') center/cover;border:0;border-radius:24px;box-shadow:none}.benefits-panel img.benefits-logo{background:#f8f8f0ee;padding:20px;border-radius:20px;width:160px}.benefits h2{font-size:clamp(30px,3.4vw,42px)}.benefit-item p{font-size:14px}
+.plant-grid{max-width:960px;gap:24px}.plant-card{padding:12px 12px 24px;box-shadow:none;border-color:#dde4d3}.plant-icon{width:100%;height:220px;border:0;border-radius:14px;margin-bottom:20px}.plant-card h4{font-family:'Fraunces',serif;font-size:24px}.plant-tag{font-size:10px;letter-spacing:.08em}
+.about{background:#f0f3e8}.team-card{box-shadow:none;padding:30px 20px}.team-avatar{width:86px;height:86px}.team-card .note{color:#596b57}.team-card .role{font-size:13px}
+.faq-list{max-width:800px;gap:14px}.faq-q{padding:22px;font-size:15px;line-height:1.6}.faq-a{background:var(--primary);grid-template-rows:0fr}.faq-a p{padding:0 22px;color:#fff;min-height:0;visibility:hidden;transition:padding .2s}.faq-item.open .faq-a{grid-template-rows:1fr}.faq-item.open .faq-a p{padding:0 22px 22px;visibility:visible}
+footer.site-footer{margin-top:0;background:#193d2b;padding-top:64px}.footer-apk-note{color:#d1dfc8;font-size:11px;line-height:1.8}.footer-col h5{color:#c3d4b5}.footer-bottom,.footer-mono{color:#c0cfbc}.footer-qr{width:128px;height:128px}.footer-legal-bar{padding:24px 0}.footer-legal:empty{display:none}
+@media(min-width:761px) and (max-width:1050px){.nav-links{gap:14px}.logo-text{font-size:14px}.hero-grid{gap:28px}.hero-visual{height:470px}.hero-visual>.phone{width:210px;height:430px}.hero-pills{gap:10px}.hero-pill{font-size:10px}}
+@media(max-width:960px){.hero-grid{grid-template-columns:1fr 1fr}.hero-visual{order:initial}.why>.wrap{gap:14px}.why-row{padding:14px}.why-copy h3{font-size:21px}}
+@media(max-width:760px){.wrap{padding:0 22px}nav.wrap{height:72px}.hero{padding:44px 0 56px}.hero-grid{grid-template-columns:1fr;gap:42px}h1.hero-title{font-size:clamp(42px,9vw,64px)}.hero-sub{font-size:16px}.hero-visual{height:450px;max-width:440px;width:100%;margin:auto}.hero-visual>.phone{width:210px;height:400px}.hero-pills{gap:12px}.hero-pill{font-size:11px}.why>.wrap{display:block}.why .section-head{margin-bottom:32px}.why-row{margin-bottom:18px;padding:20px}.why-copy h3{font-size:26px}.why-body{gap:20px}.why-icon-panel{aspect-ratio:16/10}.why,.how,.supported,.about,.faq,.benefits,.app-exp{padding:60px 0}.plant-grid{grid-template-columns:repeat(3,minmax(0,1fr));max-width:none;gap:10px}.plant-icon{height:140px}.plant-card{padding:8px 8px 18px}.plant-card h4{font-size:19px}.plant-tag{font-size:8px;padding:4px 6px}.benefits-panel{min-height:300px}.footer-grid{gap:30px}.team-grid{gap:14px}.team-card{padding:24px}.section-head h2{font-size:34px}}
+@media(max-width:380px){.logo-text{font-size:15px}.plant-grid{grid-template-columns:1fr}.plant-icon{height:220px}.hero-ctas>a{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

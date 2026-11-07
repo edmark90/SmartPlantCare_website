@@ -1,32 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Plant Care</title>
+  <title>SmartPlantCare | A little smarter. A lot greener.</title>
   <meta name="description" content="SmartPlantCare helps you identify plants, detect diseases, monitor plant health, and automate irrigation through one simple Android application.">
 
-  <!-- Open Graph / social sharing preview -->
   <meta property="og:title" content="SmartPlantCare — AI-Powered Plant Monitoring & Care">
   <meta property="og:description" content="Identify plants, detect diseases, monitor plant health, and automate irrigation — all from one simple Android app.">
-  <meta property="og:image" content="logo-icon.png">
+  <meta property="og:image" content="images/logo-mark.png">
   <meta property="og:type" content="website">
 
-  <link rel="icon" href="logo-icon.png" type="image/png">
+  <link rel="icon" href="images/logo-mark.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/tailwind.css?v=design-fix-2">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header>
   <nav class="wrap">
     <div class="logo">
-      <img src="logo-mark.png" alt="SmartPlantCare logo" class="logo-mark">
+      <img src="images/logo-mark.png" alt="SmartPlantCare logo" class="logo-mark">
       <span class="logo-text">SMART <span>PLANT</span> CARE</span>
     </div>
     <div class="nav-links nav-mobile-hide">
@@ -35,7 +35,7 @@
       <a href="#about" class="nav-cta">About</a>
       <a href="#faq" class="nav-cta">FAQ</a>
     </div>
-    <a href="#download" class="nav-cta nav-mobile-hide">Download APK</a>
+    <a href="#download" class="nav-cta nav-mobile-hide">Get the Android app</a>
 
     <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span><span></span>
@@ -47,20 +47,21 @@
     <a href="#how">How It Works</a>
     <a href="#about">About</a>
     <a href="#faq">FAQ</a>
-    <a href="#download" class="mobile-menu-cta">Download APK</a>
+    <a href="#download" class="mobile-menu-cta">Get the Android app</a>
   </div>
 </header>
 
+<main id="main">
 <section class="hero">
   <div class="wrap hero-grid">
 
     <div>
       <div class="eyebrow">AI-Powered Plant Care</div>
-      <h1 class="hero-title">Keep Your Plants Healthy with <span class="accent">SmartPlantCare</span></h1>
-      <p class="hero-sub">Instantly helps you identify plants, detect diseases, monitor plant health, and automate irrigation through one simple Android application.</p>
+      <h1 class="hero-title">A little smarter.<span class="accent">A lot greener.</span></h1>
+      <p class="hero-sub">Meet your garden&#39;s new companion. Identify plants, spot signs of disease, and take the guesswork out of watering with SmartPlantCare.</p>
       <div class="hero-ctas">
-        <a href="#download" class="btn-primary">Download APK</a>
-        <a href="#why" class="btn-ghost">View Features</a>
+        <a href="#download" class="btn-primary">Get the Android app</a>
+        <a href="#why" class="btn-ghost">Explore the features &rarr;</a>
       </div>
       <div class="hero-pills">
         <div class="hero-pill">
@@ -88,7 +89,6 @@
 
         <path class="vine-path" d="M400,520 C420,460 370,420 382,360 C394,300 340,270 352,210 C362,150 320,120 330,60"/>
         <path class="vine-pulse" d="M400,520 C420,460 370,420 382,360 C394,300 340,270 352,210 C362,150 320,120 330,60" style="animation-delay:1.6s"/>
-
 
         <g class="vine-leaf">
           <path d="M0,0C10,-14 28,-14 30,0C28,10 10,10 0,0Z" transform="translate(70,400) rotate(-25)" fill="#6b8e0f" opacity="0.85"/>
@@ -128,7 +128,7 @@
           </div>
           <div class="ps-card">
             <div class="ps-row"><span class="k">MOISTURE</span><span class="v">50%</span></div>
-            <div class="ps-bar"><div class="ps-bar-fill" style="width:42%"></div></div>
+            <div class="ps-bar"><div class="ps-bar-fill" style="width:50%"></div></div>
           </div>
           <div class="ps-card">
             <div class="ps-row"><span class="k">LIGHT</span><span class="v">700 lx</span></div>
@@ -150,40 +150,37 @@
     </div>
 
     <div class="why-row">
-      <div class="why-num">01</div>
       <div class="why-body">
         <div class="why-copy">
           <h3>AI Disease Detection</h3>
           <p>Point your camera at a leaf and the model flags disease and pest patterns early, with a plain-language read on what's wrong and what to do next.</p>
         </div>
         <div class="why-icon-panel">
-          <img src="ai-disease-detection.jpg" alt="AI disease detection on a phone" loading="lazy">
+          <img src="images/ai-disease-detection.jpg" alt="AI disease detection on a phone" loading="lazy">
         </div>
       </div>
     </div>
 
     <div class="why-row">
-      <div class="why-num">02</div>
       <div class="why-body">
         <div class="why-copy">
           <h3>Plant Identification</h3>
-          <p>Snap a photo of any plant and match it against a wide species database to get the right care profile, not a generic one.</p>
+          <p>Snap a photo of a supported plant to identify it and find its care profile, starting with tomato, eggplant, and chili.</p>
         </div>
         <div class="why-icon-panel">
-          <img src="plant-identification.jpg" alt="Identifying a plant with a phone" class="shift-right" loading="lazy">
+          <img src="images/plant-identification.jpg" alt="Identifying a plant with a phone" class="shift-right" loading="lazy">
         </div>
       </div>
     </div>
 
     <div class="why-row">
-      <div class="why-num">03</div>
       <div class="why-body">
         <div class="why-copy">
           <h3>Smart Irrigation</h3>
           <p>When the soil sensor calls for water, the system waters automatically, no timers to remember, just precision care running in the background.</p>
         </div>
         <div class="why-icon-panel">
-          <img src="smart-irrigation.jpg" alt="Smart irrigation system watering plants" loading="lazy">
+          <img src="images/smart-irrigation.jpg" alt="Smart irrigation system watering plants" loading="lazy">
         </div>
       </div>
     </div>
@@ -220,7 +217,7 @@
           </div>
           <div class="ps-card">
             <div class="ps-row"><span class="k">MOISTURE</span><span class="v">50%</span></div>
-            <div class="ps-bar"><div class="ps-bar-fill" style="width:42%"></div></div>
+            <div class="ps-bar"><div class="ps-bar-fill" style="width:50%"></div></div>
           </div>
           <div class="ps-card">
             <div class="ps-row"><span class="k">LIGHT</span><span class="v">700 lx</span></div>
@@ -281,7 +278,6 @@
 <section class="benefits">
   <div class="wrap benefits-grid">
     <div class="benefits-panel">
-      <img src="logo-footer.png" alt="SmartPlantCare logo" class="benefits-logo">
     </div>
     <div>
       <div class="section-eyebrow">Benefits</div>
@@ -325,27 +321,27 @@
     <div class="section-head">
       <span class="section-eyebrow">Who Is It For</span>
       <h2>Built for the Plants You Actually Grow</h2>
-      <p>SmartPlantCare ships with care profiles for common vegetables and houseplants, with more added over time.</p>
+      <p>Start with care profiles for tomato, eggplant, and chili, with more plants planned.</p>
     </div>
 
     <div class="plant-grid">
       <div class="plant-card">
         <div class="plant-icon">
-          <img src="tomato.jpg" alt="Tomato plant" loading="lazy">
+          <img src="images/tomato.jpg" alt="Tomato plant" loading="lazy">
         </div>
         <h4>Tomato</h4>
         <span class="plant-tag">HEALTHY</span>
       </div>
       <div class="plant-card">
         <div class="plant-icon">
-          <img src="eggplant.jpg" alt="Eggplant plant" loading="lazy">
+          <img src="images/eggplant.jpg" alt="Eggplant plant" loading="lazy">
         </div>
         <h4>Eggplant</h4>
         <span class="plant-tag">HEALTHY</span>
       </div>
       <div class="plant-card">
         <div class="plant-icon">
-          <img src="chili.jpg" alt="Chili plant" loading="lazy">
+          <img src="images/chili.jpg" alt="Chili plant" loading="lazy">
         </div>
         <h4>Chili</h4>
         <span class="plant-tag">HEALTHY</span>
@@ -368,9 +364,9 @@
     <div class="team-grid">
       <div class="team-card">
         <div class="team-avatar">
-          <img src="team-edmark.jpg" alt="Edmark O. Basaya">
+          <img src="images/team-edmark.jpg" alt="Edmark O. Basaya">
         </div>
-        <h4>Edmark O.Basaya</h4>
+        <h4>Edmark O. Basaya</h4>
         <div class="role">Lead Mobile Developer</div>
         <div class="note">Android app &amp; UI implementation</div>
       </div>
@@ -382,7 +378,7 @@
       </div>
       <div class="team-card">
         <div class="team-avatar">
-          <img src="team-jc.jpg" alt="John Christian F. Base">
+          <img src="images/team-jc.jpg" alt="John Christian F. Base">
         </div>
         <h4>John Christian F. Base</h4>
         <div class="role">Front-end Developer &amp; testing</div>
@@ -402,36 +398,37 @@
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q">Do I need special hardware sensors to use the app?<span class="plus">+</span></button>
-        <div class="faq-a"><p>The app works on its own for plant identification and disease scanning. Real-time soil, light, and temperature monitoring requires a paired sensor module.</p></div>
+        <div class="faq-a"><p>You can use the app for plant identification and disease scanning without connecting a sensor. Start by adding a supported plant and taking a clear photo of its leaves. For soil moisture readings and other sensor-based measurements, you need a compatible sensor module paired with the system. Automatic irrigation also requires the connected watering hardware; the Android app alone cannot water your plants. Follow the setup instructions provided with your hardware before enabling automatic care.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">How accurate is the AI disease detection?<span class="plus">+</span></button>
-        <div class="faq-a"><p>The model is trained to flag common disease and pest patterns early with a confidence score, and is intended as a first read — not a replacement for expert diagnosis.</p></div>
+        <div class="faq-a"><p>AI disease detection provides an initial assessment of visible symptoms in a leaf photo. Results depend on image quality, lighting, the plant species, and whether the condition is represented in the model. For a clearer scan, photograph a single affected leaf in natural light, keep it in focus, and avoid strong shadows or a busy background. A healthy result does not guarantee that a plant is free of every disease. Compare the result with the plant&#39;s actual condition and ask an agricultural specialist if symptoms persist or spread.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Which plants does SmartPlantCare support?<span class="plus">+</span></button>
-        <div class="faq-a"><p>The current build ships with care profiles for tomato, eggplant, and chili, with more species planned.</p></div>
+        <div class="faq-a"><p>The current build focuses on three commonly grown vegetables: tomato, eggplant, and chili. These plants are the starting point for the available care profiles and supported scanning experience. Choose the correct plant profile when adding a plant so the information stays relevant to what you are growing. Identification and disease results for other species may be unavailable or unreliable. Support for additional plants is planned, but availability will depend on future development and validation.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">Is my plant data stored securely?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Plant and sensor data is tied to your account and is not shared with third parties.</p></div>
+        <div class="faq-a"><p>Plant profiles and sensor readings are associated with the account used in the app. Use a strong, unique password, keep your login details private, and sign out when using a shared device. Before uploading photos, check that the image does not include personal documents, people, or location details you do not intend to share. This capstone website does not yet provide a published privacy policy describing storage, retention, or deletion procedures. Contact the development team through the linked project channels for clarification before submitting sensitive information.</p></div>
       </div>
     </div>
   </div>
 </section>
 
+</main>
 <footer class="site-footer" id="download">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo">
-          <img src="logo-mark-white.png" alt="SmartPlantCare logo" class="logo-mark">
+          <img src="images/logo-mark-white.png" alt="SmartPlantCare logo" class="logo-mark">
           <span class="logo-text">SMART <span>PLANT</span> CARE</span>
         </div>
         <p>SmartPlantCare helps you identify plants, detect diseases, monitor plant health, and automate irrigation — all from one simple Android application.</p>
         <div class="footer-download-row">
           <div class="footer-qr">
-            <img src="qr-code.jpg" alt="QR code to download SmartPlantCare" loading="lazy">
+            <img src="images/qr-code.jpg" alt="QR code to download SmartPlantCare" loading="lazy">
           </div>
           <div>
             <div class="footer-apk-note">v0.9 pre-release · Android required</div>
@@ -460,13 +457,7 @@
     </div>
 
     <div class="footer-legal-bar">
-      <div class="footer-legal">
-        <a href="#">Terms of Use</a>
-        <span class="dot">•</span>
-        <a href="#">Privacy Policy</a>
-        <span class="dot">•</span>
-        <a href="#">Contact Us</a>
-      </div>
+      
 
       <div class="footer-socials">
         <a href="https://www.facebook.com/profile.php?id=61594250781036" class="footer-social" aria-label="Facebook">
